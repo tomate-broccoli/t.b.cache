@@ -12,10 +12,11 @@ const cache = f=>{
 }
 module.exports = cache
 
+
 if(module.parent) return
 
 // sample
-const f = cache(()=>{
+const f = require('./index.js')(()=>{
     const dt = Date.now()
     console.log(`${dt}: called.`)
     return v=>`${Date.now()}: v=[${v}], dt=[${dt}].`
